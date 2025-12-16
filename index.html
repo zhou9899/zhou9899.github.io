@@ -1,12 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Zhou | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Zhou | Gamer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #020617, #020617 40%, #000);
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #38bdf8; }
+      50% { box-shadow: 0 0 25px #38bdf8; }
+      100% { box-shadow: 0 0 10px #38bdf8; }
+    }
+
+    /* Fade up animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 70px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.2rem;
+      color: #38bdf8;
+      text-shadow: 0 0 15px rgba(56,189,248,0.8);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+      letter-spacing: 1px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 35px;
+      border: 1px solid rgba(56,189,248,0.2);
+      animation: fadeUp 1s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-6px) scale(1.01);
+      animation: glow 2s infinite;
+    }
+
+    section h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #7dd3fc;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-shadow: 0 0 8px rgba(125,211,252,0.6);
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    ul li i {
+      color: #38bdf8;
+      margin-right: 8px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-shadow: 0 0 10px #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* Floating background particles */
+    .particle {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: #38bdf8;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+      }
+      to {
+        transform: translateY(-10vh);
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I’m Zhou</h1>
-  <p>Welcome to my portfolio website.</p>
+
+  <!-- Background particles -->
+  <div class="particle" style="left:10%; animation-duration:12s;"></div>
+  <div class="particle" style="left:30%; animation-duration:9s;"></div>
+  <div class="particle" style="left:50%; animation-duration:14s;"></div>
+  <div class="particle" style="left:70%; animation-duration:11s;"></div>
+  <div class="particle" style="left:90%; animation-duration:13s;"></div>
+
+  <div class="container">
+
+    <header>
+      <h1>Zhou</h1>
+      <p>19 • Gamer • Future Web Developer</p>
+    </header>
+
+    <section>
+      <h2><i class="fa-solid fa-user"></i> About Me</h2>
+      <p>
+        I’m Zhou, a 19-year-old gamer who enjoys immersive worlds, strategy,
+        and technology. I’m currently learning web development and slowly
+        building my skills to create projects of my own.
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fa-solid fa-gamepad"></i> Skills</h2>
+      <ul>
+        <li><i class="fa-solid fa-code"></i> Beginner HTML</li>
+        <li><i class="fa-solid fa-palette"></i> Learning CSS</li>
+        <li><i class="fa-solid fa-layer-group"></i> Web Page Structure</li>
+        <li><i class="fa-solid fa-brain"></i> Creative & Curious Mind</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><i class="fa-solid fa-folder-open"></i> Projects</h2>
+      <p>
+        No projects yet — currently grinding knowledge and preparing
+        my first builds.
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+      <p><i class="fa-solid fa-at"></i> 
+        <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
+      </p>
+      <p><i class="fa-brands fa-github"></i> 
+        <a href="https://github.com/zhou9899" target="_blank">github.com/zhou9899</a>
+      </p>
+    </section>
+
+    <footer>
+      © 2025 Zhou • Gamer Mode: ON 🎮
+    </footer>
+
+  </div>
+
 </body>
 </html>
